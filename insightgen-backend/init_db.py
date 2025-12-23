@@ -88,13 +88,11 @@ def create_customers(session):
         first_name = random.choice(FIRST_NAMES)
         last_name = random.choice(LAST_NAMES)
         region = random.choice(REGIONS)
-        city = random.choice(CITIES[region])
         
         customer = Customer(
             customer_id=customer_id,
             customer_name=f"{first_name} {last_name}",
-            region=region,
-            city=city
+            region=region
         )
         customers.append(customer)
         customer_id += 1
